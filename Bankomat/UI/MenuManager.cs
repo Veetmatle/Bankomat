@@ -67,7 +67,7 @@ namespace Bankomat.UI
 
             var availableRates = _exchangeService.GetAvailableRates();
 
-            // Wybór waluty źródłowej
+            // Wybór waluty 1
             ConsoleHelper.PrintInfo("Wybór waluty źródłowej:");
             string fromCurrencyCode = ConsoleHelper.ReadLine("Podaj kod waluty (np. USD, EUR, PLN): ").ToUpper();
 
@@ -78,7 +78,7 @@ namespace Bankomat.UI
                 return;
             }
 
-            // Wybór waluty docelowej
+            // Wybór waluty 2
             ConsoleHelper.PrintInfo("Wybór waluty docelowej:");
             string toCurrencyCode = ConsoleHelper.ReadLine("Podaj kod waluty (np. USD, EUR, PLN): ").ToUpper();
 
@@ -97,7 +97,7 @@ namespace Bankomat.UI
                 return;
             }
 
-            // Wprowadzenie kwoty
+            // Kwota
             ConsoleHelper.PrintInfo("Podaj kwotę do wymiany:");
             string amountInput = ConsoleHelper.ReadLine($"Kwota w {fromCurrencyCode}: ");
 
@@ -108,7 +108,7 @@ namespace Bankomat.UI
                 return;
             }
 
-            // Wykonanie wymiany
+            // Wymiana
             try
             {
                 double result = _exchangeService.Convert(amount, fromRate!, toRate!);
@@ -193,30 +193,13 @@ namespace Bankomat.UI
         private void ShowAbout()
         {
             ConsoleHelper.PrintHeader("INFORMACJE O APLIKACJI");
-
-            Console.WriteLine("Aplikacja: Bankomat - Kantor Walutowy");
-            Console.WriteLine("Wersja: 1.0.0");
-            Console.WriteLine();
-            Console.WriteLine("Opis:");
-            Console.WriteLine("  Aplikacja konsolowa do wymiany walut na podstawie");
-            Console.WriteLine("  aktualnych kursów średnich NBP (Narodowy Bank Polski).");
-            Console.WriteLine();
-            Console.WriteLine("Źródło danych:");
-            Console.WriteLine("  https://www.nbp.pl/kursy/xml/lasta.xml");
-            Console.WriteLine();
-            Console.WriteLine("Technologie:");
-            Console.WriteLine("  - .NET 8.0");
-            Console.WriteLine("  - C# 12");
-            Console.WriteLine("  - Wzorzec projektowy: Singleton");
-            Console.WriteLine("  - Architektura: Warstwowa (OOP)");
-
+            Console.WriteLine("Kiedyś będą");
             ConsoleHelper.WaitForKey();
         }
 
         private void Exit()
         {
             ConsoleHelper.PrintHeader("WYJŚCIE");
-            ConsoleHelper.PrintInfo("Dziękujemy za skorzystanie z aplikacji Bankomat!");
             Console.WriteLine("Do widzenia! 👋");
             _isRunning = false;
         }

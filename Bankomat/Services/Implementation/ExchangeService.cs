@@ -18,7 +18,6 @@ namespace Bankomat.Services.Implementation
 
         private ExchangeService()
         {
-            // Oficjalny URL NBP z poprawnym certyfikatem SSL
             _sourceUrl = "https://static.nbp.pl/dane/kursy/xml/LastA.xml";
             _repository = new RestRateRepository();
             _parser = new XmlRateParser();

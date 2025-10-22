@@ -8,14 +8,14 @@ namespace Bankomat
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.Title = "Bankomat - Kantor Walutowy";
+            Console.Title = "Bankomat - o dziwo bez opłat";
 
             try
             {
                 var exchangeService = ExchangeService.Instance;
                 
                 Console.WriteLine("=== BANKOMAT - KANTOR WALUTOWY ===");
-                Console.WriteLine("Inicjalizacja systemu...\n");
+                Console.WriteLine("Odpalamy za 3, 2, 1...\n");
                 
                 await exchangeService.UpdateAsync();
                 
@@ -28,7 +28,7 @@ namespace Bankomat
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"\n❌ Błąd krytyczny aplikacji: {ex.Message}");
+                Console.WriteLine($"\n Wylosowało potężny błąd: {ex.Message}");
                 Console.ResetColor();
             }
         }

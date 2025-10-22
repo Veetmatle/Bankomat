@@ -7,7 +7,7 @@ namespace Bankomat.Services.Implementation
     {
         public ExchangeTable Parse(string rawData)
         {
-            // TODO: Implementacja parsowania JSON (do przyszłego rozszerzenia)
+            // Alternatywnie do implementacji jakby zmienili z xmla na json
             throw new NotImplementedException("JSON parsing is not implemented yet. Use XML parser.");
         }
     }

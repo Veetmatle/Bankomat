@@ -12,3 +12,4 @@ D:\RIDER_PROJECTS\Bankomat\Bankomat\obj\Debug\net9.0\refint\Bankomat.dll
 D:\RIDER_PROJECTS\Bankomat\Bankomat\obj\Debug\net9.0\Bankomat.pdb
 D:\RIDER_PROJECTS\Bankomat\Bankomat\obj\Debug\net9.0\Bankomat.genruntimeconfig.cache
 D:\RIDER_PROJECTS\Bankomat\Bankomat\obj\Debug\net9.0\ref\Bankomat.dll
+D:\RIDER_PROJECTS\Bankomat\Bankomat\obj\Debug\net9.0\Bankomat.sourcelink.json

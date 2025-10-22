@@ -10,9 +10,7 @@ namespace Bankomat.Services.Implementation
         {
             var handler = new HttpClientHandler
             {
-                // Automatyczna dekompresja
                 AutomaticDecompression = System.Net.DecompressionMethods.GZip | System.Net.DecompressionMethods.Deflate
-                // Walidacja SSL WŁĄCZONA - static.nbp.pl ma poprawny certyfikat
             };
 
             _httpClient = new HttpClient(handler)
@@ -20,7 +18,6 @@ namespace Bankomat.Services.Implementation
                 Timeout = TimeSpan.FromSeconds(30)
             };
 
-            // Dodanie User-Agent i Accept headers
             _httpClient.DefaultRequestHeaders.Add("User-Agent", "BankomatApp/1.0");
             _httpClient.DefaultRequestHeaders.Add("Accept", "application/xml, text/xml, */*");
         }

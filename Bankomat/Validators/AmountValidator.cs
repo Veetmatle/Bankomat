@@ -13,16 +13,12 @@ namespace Bankomat.Validators
                 return false;
             }
 
-            // Akceptujemy zarówno kropkę jak i przecinek jako separator dziesiętny
             string normalizedInput = input.Replace(',', '.');
 
-            // Próba parsowania
             if (!double.TryParse(normalizedInput, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
             {
                 return false;
             }
-
-            // Sprawdzenie czy kwota jest dodatnia i ma sens
             return amount > 0 && amount <= double.MaxValue && !double.IsInfinity(amount) && !double.IsNaN(amount);
         }
 
